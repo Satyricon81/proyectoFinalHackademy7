@@ -5,7 +5,6 @@
             <path d="M35.5 0H51.5L32.5 32H16.5L35.5 0Z" class="ccompli1" fill="rgb(240, 166, 70)"></path>
             <path d="M19.5 0H31.5L12.5 32H0.5L19.5 0Z" class="ccompli2" fill="#04080F"></path>
         </svg> --}}
-        {{-- <a class="navbar-brand fw-bold fs-5 fst-italic" href="{{ route('welcome') }}">RAPIDO.ES</a> --}}
         <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04"
         aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -15,11 +14,8 @@
             <li class="nav-item m-2">
                 <a class="nav-link active fw-bold fs-5 text-uppercase" aria-current="page" href="{{ route('welcome') }}">{{ __('ui.home') }}</a>
             </li>
-            {{-- <li class="nav-item m-2">
-                <a class="nav-link active fw-bold fs-5" href="{{ route('about') }}">{{ __('ui.aboutus') }}</a>
-            </li> --}}
             <li class="nav-item m-2">
-                <a class="nav-link active fw-bold fs-5 text-uppercase" href="{{ route('contact') }}">{{ __('ui.contact') }}</a>
+            <a class="nav-link active fw-bold fs-5 text-uppercase" href="{{ route('contact') }}">{{ __('ui.contact') }}</a>
             </li>
             <li class="nav-item m-2 dropdown">
                 <a class="nav-link active fw-bold fs-5 dropdown-toggle" href="#" id="dropdown04"

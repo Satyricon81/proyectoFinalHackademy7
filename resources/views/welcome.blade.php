@@ -51,18 +51,13 @@
     <div class="row h-100 align-items-center justify-content-center">
         <div class="col-12 ">
             <h1 class="text-white textshadow reveal d-none d-md-block">{{ __('ui.welcome') }}
-                <i>
-                    RAPIDO
-                </i>
+                <i>RAPIDO</i>
             </h1>
             <h3 class="text-white textshadow reveal d-block d-md-none mt-5 pt-5">{{ __('ui.welcome') }}
-                <i>
-                    RAPIDO
-                </i>
+                <i>RAPIDO</i>
             </h3>
             <p class="text-white h3 text-uppercase textshadow reveal">{{ __('ui.subwelcome') }}
             </p>
-
             <a class="btn botonanuncio mt-5 textshadow reveal" href="{{ route('ad.new') }}">{{ __('ui.createanewad') }}
             </a>
         </div>
@@ -144,13 +139,12 @@
                     href="{{ route('ad.new') }}">{{ __('ui.createanewad') }}
                 </a>
             </div>
-
         </div>
     </div>
 </div>
 
 <!-- contendor con categorias e iconos -->
-<div class="container my-3 py-3">
+<div class="container my-3 py-3 d-none d-lg-block">
     <div class="col-12 d-flex justify-content-center">
         @foreach ($categories as $category)
         <a type="button" class="btn btn-transparent mx-3 box-radius"  href="{{route('category.ads', ['name'=>$category->name, 'id'=>$category->id])}}">
@@ -173,9 +167,7 @@
                     href="{{ route('about') }}">{{ __('ui.ourstory') }}</a>
                 <a class="nav-link active fw-bold fs-3 text-white"
                     href="{{ route('contact') }}">{{ __('ui.contactus') }}</a>
-
             </div>
-
         </div>
     </div>
 </div>
