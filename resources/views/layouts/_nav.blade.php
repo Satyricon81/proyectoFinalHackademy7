@@ -6,7 +6,7 @@
             <path d="M19.5 0H31.5L12.5 32H0.5L19.5 0Z" class="ccompli2" fill="#04080F"></path>
         </svg> --}}
         {{-- <a class="navbar-brand fw-bold fs-5 fst-italic" href="{{ route('welcome') }}">RAPIDO.ES</a> --}}
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04"
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04"
         aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>

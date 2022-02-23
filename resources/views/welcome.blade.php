@@ -126,9 +126,9 @@
     <div class="row my-3 py-3">
         <div class="col-12 col-md-6">
             <img src="/imagenes_propias/desc1.jpg" height="800" width="500"
-                class=" d-none d-md-block mx-auto sombraImg reveal" alt="">
+                class="d-none d-xl-block mx-auto sombraImg reveal" alt="">
         </div>
-        <div class="col-12 col-md-6 text-center align-content-center mt-0 mt-md-5">
+        <div class="col-12 col-xl-6 text-center align-content-center mt-0 mt-md-5">
             <div class="reveal">
                 <h3>{{ __('ui.advantages') }}</h3>
                 <h4 class="py-2 fw-bold"> -{{ __('ui.slide1a') }}</h4>
