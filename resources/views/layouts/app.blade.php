@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{{mix('css/app.css')}}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Rápido.es</title>
+    <script src="https://kit.fontawesome.com/637ee434dc.js" crossorigin="anonymous"></script>
     @stack('style')
 </head>
 <body>

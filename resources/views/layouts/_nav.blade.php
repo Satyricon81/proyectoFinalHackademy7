@@ -27,7 +27,7 @@
                 <ul class="dropdown-menu" aria-labelledby="dropdown04">
                     @foreach ($categories as $category)
                     <li><a class="dropdown-item"
-                        href="{{route('category.ads',['name'=>$category->name,'id'=>$category->id])}}">{{__("ui.{$category->name}")}}</a>
+                        href="{{route('category.ads',['name'=>$category->name,'id'=>$category->id])}}"><i class='pe-2 {{ $category->icon }}'></i>{{__("ui.{$category->name}")}}</a>
                     </li>
                     @endforeach
                 </ul>

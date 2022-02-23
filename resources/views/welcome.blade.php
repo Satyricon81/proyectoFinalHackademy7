@@ -149,6 +149,21 @@
     </div>
 </div>
 
+<!-- contendor con categorias e iconos -->
+<div class="container my-3 py-3">
+    <div class="col-12 d-flex justify-content-center">
+        @foreach ($categories as $category)
+        <a type="button" class="btn btn-transparent mx-3 box-radius"  href="{{route('category.ads', ['name'=>$category->name, 'id'=>$category->id])}}">
+            <div class="btn">
+                <i class="px-2 py-2 h2 text-center {{$category->icon}}">
+                <h5 class="text-center py-2 text-decoration-none"><b>{{$category->name}}</b></h5></i>
+            </div>
+        </a>
+        @endforeach
+    </div>
+</div>
+
+
 <!-- contenedor sobre nosotros -->
 <div class="container-fluid sobreNosotros">
     <div class="row h-100 flex-column align-items-end justify-content-end">
