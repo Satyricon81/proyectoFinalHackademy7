@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import './style.css';
+@import 'flag-icons/css/flag-icons';
+@import 'swiper/css/bundle';
+@import '@fortawesome/fontawesome-free/css/all.min';
+@import 'dropzone/dist/basic';
+@import 'dropzone/dist/dropzone';
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500;600&display=swap');
