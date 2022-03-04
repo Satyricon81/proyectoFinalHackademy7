@@ -1,48 +1,3 @@
-{{-- @extends('layouts.app')
-@section('content')
-<div class="container text-center mb-5 py-3">
-    <div class="row">
-        <div class="col-12 my-3 py-3">
-            <h1>{{ __('ui.contactview') }}</h1>
-        </div>
-    </div>
-</div>
-<div class="container d-flex justify-content-center mb-5">
-    <div class="row mb-5">
-        <div class="col-12 col-md-4">
-            <div class="card" style="width: 18rem; height: 10rem;">
-                <div class="card-body shadow">
-                    <i class="fa-solid fa-envelope fs-3"></i>
-                    <p class="card-text">{{ __('ui.email') }}</p>
-                    <a href="mailto:rapido@rapidosa.es">rapido@rapidosa.es</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-4">
-            <div class="card" style="width: 18rem; height: 10rem;">
-                <div class="card-body shadow">
-                    <i class="fa-solid fa-phone fs-3"></i>
-                    <p class="card-text">{{ __('ui.telefono') }}</p>
-                    <a href="">+34 699876532</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-4">
-            <div class="card" style="width: 18rem; height: 10rem;">
-
-                <div class="card-body shadow">
-                    <i class="fa-brands fa-discord fs-3"></i>
-                    <p class="card-text">{{ __('ui.discord') }}
-                        <a href="">https://discord.gg/adsseJ39</a>
-                    </p>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection --}}
-
 @extends('layouts.app')
 @push('style')
 <style>
@@ -52,7 +7,9 @@
         box-shadow: 20px 20px 60px #bcccd9,
         -20px -20px 60px #feffff;
     }
-    
+    body {
+        background-color: rgb(222, 229, 240);
+    }
     
     .head {
         height: 100vh;
@@ -62,7 +19,6 @@
     .sombraImg {
         box-shadow: 5px 5px 8px rgb(240, 166, 70);
     }
-    
 </style>
 @endpush
 @section('content')
@@ -78,7 +34,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-4 mb-5 d-flex justify-content-center">
+        <div class="col-12 d-flex justify-content-center col-md-4 mb-5">
             <div class="card" style="width: 18rem; height: 10rem;">
                 <div class="card-body sombraImg">
                     <i class="fa-solid fa-phone fs-3"></i>
@@ -87,7 +43,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-4 mb-5 d-flex justify-content-center">
+        <div class="col-12 d-flex justify-content-center col-md-4 mb-5">
             <div class="card" style="width: 18rem; height: 10rem;">
                 <div class="card-body sombraImg">
                     <i class="fa-brands fa-discord fs-3"></i>
@@ -96,6 +52,5 @@
             </div>
         </div>
     </div>
-</div>
-    
+</div> 
 @endsection

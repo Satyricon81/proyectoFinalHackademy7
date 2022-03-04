@@ -7,6 +7,10 @@
         box-shadow: 20px 20px 60px #bcccd9,
             -20px -20px 60px #feffff;
     }
+    
+    body {
+        background-color: rgb(222, 229, 240);
+    }
 
     .sombraImg {
         box-shadow: 5px 5px 8px rgb(240, 166, 70);

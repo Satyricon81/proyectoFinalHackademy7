@@ -1,4 +1,26 @@
 @extends('layouts.app')
+@push('style')
+<style>
+    .neomorphInput {
+        border-radius: 50px;
+        background: #ddf0ff;
+        box-shadow: 20px 20px 60px #bcccd9,
+        -20px -20px 60px #feffff;
+    }
+    body {
+        background-color: rgb(222, 229, 240);
+    }
+    
+    .head {
+        height: 100vh;
+        width: 100%;
+    }
+
+    .sombraImg {
+        box-shadow: 5px 5px 8px rgb(240, 166, 70);
+    }
+</style>
+@endpush
 @section('content')
 @if($ad)
 <div class='container my-5 py-5'>
@@ -11,18 +33,18 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-3">
-                            <h4>User & Email</h4>
+                            <h4>User ID, User Name & Email</h4>
                         </div>
                         <div class="col-md-9">
-                            #{{$ad->user->id}}
-                            {{$ad->user->name}}
-                            {{$ad->user->email}}
+                            #{{$ad->user->id}}/
+                            {{$ad->user->name}}/
+                            {{$ad->user->email}}/
                         </div>
                     </div>
                     <hr>
                     <div class="row">
                         <div class="col-md-3">
-                            <h4>Title</h4>
+                            <h4>Title of Article</h4>
                         </div>
                         <div class="col-md-9">
                             {{$ad->title}}
@@ -38,6 +60,9 @@
                         </div>
                     </div>
                     <div class="row">
+                        <div class="col-md-3">
+                            <h4>Images</h4>
+                        </div>
                         @foreach ($ad->images as $image)
                         <div class="row md-2">
                             <div class="col-md-4">

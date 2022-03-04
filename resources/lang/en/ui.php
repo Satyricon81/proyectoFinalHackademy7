@@ -73,6 +73,13 @@ return [
     'ourstory'=>'OUR STORY',
     'contactus'=>'Contact Us!',
     'lastads' =>'LAST ADS...',
+    'newad1' =>'Title',
+    'newad2' =>'Category',
+    'newad3' =>'Price',
+    'newad4' =>'Description',
+    'newad5' =>'Images',
+    'newaddropmessage' =>'Drop images here to upload',
+    'newadbutton' =>'Submit',
 
     
 

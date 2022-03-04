@@ -5,87 +5,83 @@
         border-radius: 50px;
         background: #ddf0ff;
         box-shadow: 20px 20px 60px #bcccd9,
-            -20px -20px 60px #feffff;
+        -20px -20px 60px #feffff;
     }
-
+    
+    body {
+        background-color: rgb(222, 229, 240);
+    }
+    
     .head {
         height: 100vh;
         width: 100%;
     }
-
+    
     .card-ads {
         background-color: #FAFBEF;
         border: 1px solid rgb(96, 96, 96);
-
+        
     }
-
+    
     .borde {
         border-top: 1px solid rgb(240, 166, 70);
     }
-
-
 </style>
 @endpush
 @section('content')
 <div class="container my-3 py-3">
-    <div class="row">
-        <div class="col-12 text-center textshadow text-white">
+    <div class="row my-3 py-3">
+        <div class="col-12 text-center textshadow text-white my-5 py-5">
             <h3>{{ __('ui.categoriesview') }}</h3>
         </div>
     </div>
-        <div class="row my-5 py-5">
-            @foreach($ads as $ad)
-            <div class="col-12 col-md-3 mb-4 revealAds">
-                <div class="card card-ads rounded-0" style="width: 18rem;">
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            @foreach ($ad->images as $image)
-                            <div class="carousel-item @if($loop->first)active @endif">
-                                <img src="{{$image->getUrl(300,150)}}" class="d-block w-100" alt="...">
-                            </div>
-                            @endforeach
+    <div class="row my-5 py-5">
+        @foreach($ads as $ad)
+        <div class="col-12 col-md-3 mb-4 revealAds">
+            <div class="card card-ads rounded-0" style="width: 18rem;">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        @foreach ($ad->images as $image)
+                        <div class="carousel-item @if($loop->first)active @endif">
+                            <img src="{{$image->getUrl(300,150)}}" class="d-block w-100" alt="...">
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                        </button>
+                        @endforeach
                     </div>
-                    <div class="card-body">
-                        <div class="p-4">
-                            <h5 class="card-title fw-bold">{{$ad->title}}</h5>
-                            <p class="card-text small text-muted">{{$ad->description}}</p>
-                            <p class="card-text text-muted small">{{$ad->price}}€</p>
-                        </div>
-                        
-                        <div class="d-flex justify-content-end borde align-items-center py-2">
-                        <a href="{{route('ad.details', ['id'=>$ad->id])}}" class="btn px-4 rounded-0">DETALLE 
-                        <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            @endforeach
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <div class="row my-3">
-            <div class="col-12 d-flex justify-content-center">
-                {{ $ads->links() }}   
+        <div class="card-body">
+            <div class="p-4">
+                <h5 class="card-title fw-bold">{{$ad->title}}</h5>
+                <p class="card-text small text-muted">{{$ad->description}}</p>
+                <p class="card-text text-muted small">{{$ad->price}}€</p>
+            </div>
+            <div class="d-flex justify-content-end borde align-items-center py-2">
+                <a href="{{route('ad.details', ['id'=>$ad->id])}}" class="btn px-4 rounded-0">DETALLE 
+                    <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
             </div>
         </div>
     </div>
-    @endsection
-
-    @push('script')
+    @endforeach
+</div>
+<div class="row my-3">
+    <div class="col-12 d-flex justify-content-center">
+        {{ $ads->links() }}
+    </div>
+</div>
+@endsection
+@push('script')
 <script>
     ScrollReveal().reveal('.reveal', { distance: '100px', duration: 800, interval: 500 });
     ScrollReveal().reveal('.revealAds', { duration: 600, interval: 500, scale: 0.85 });
 </script>
-    
 @endpush
-    

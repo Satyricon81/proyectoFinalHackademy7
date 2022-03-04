@@ -73,6 +73,13 @@ return [
     'ourstory'=>'NUESTRA HISTORIA',
     'contactus'=>'Contacta Con Nosotros!',
     'lastads' =>'ULTIMOS ANUNCIOS...',
+    'newad1' =>'Titulo',
+    'newad2' =>'Categoria',
+    'newad3' =>'Precio',
+    'newad4' =>'Descripcion',
+    'newad5' =>'Imagenes',
+    'newaddropmessage' =>'Suelta tus imagenes aqui para subirlas',
+    'newadbutton' =>'Enviar',
     
 
     

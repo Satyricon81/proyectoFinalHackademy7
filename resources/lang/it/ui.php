@@ -73,4 +73,11 @@ return [
     'ourstory'=>'LA NOSTRA STORIA',
     'contactus'=>'Contattaci!',
     'lastads' =>'ULTIMI ANNUNCI...',
+    'newad1' =>'Titolo',
+    'newad2' =>'Categoria',
+    'newad3' =>'Prezzo',
+    'newad4' =>'Descrizione',
+    'newad5' =>'Immagini',
+    'newaddropmessage' =>'Trascina le immagini qui per caricarle',
+    'newadbutton' =>'Invia',
 ];

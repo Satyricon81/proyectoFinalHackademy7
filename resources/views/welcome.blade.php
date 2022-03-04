@@ -1,6 +1,10 @@
 @extends('layouts.app')
 @push('style')
 <style>
+    body {
+        background-color: rgb(234, 239, 246);
+    }
+    
     .aboveImage {
         height: 100vh;
         width: 100%;
@@ -115,7 +119,6 @@
     </div>
 </div>
 
-
 <!-- contendor con description -->
 <div class="container my-0 py-0 my-md-3 py-md-3">
     <div class="row my-3 py-3">
@@ -144,13 +147,13 @@
 </div>
 
 <!-- contendor con categorias e iconos -->
-<div class="container my-3 py-3 d-none d-lg-block">
+<div class="container my-3 d-none d-lg-block">
     <div class="col-12 d-flex justify-content-center">
         @foreach ($categories as $category)
         <a type="button" class="btn btn-transparent mx-3 box-radius"  href="{{route('category.ads', ['name'=>$category->name, 'id'=>$category->id])}}">
             <div class="btn">
                 <i class="px-2 py-2 h2 text-center {{$category->icon}}">
-                <h5 class="text-center py-2 text-decoration-none"><b>{{$category->name}}</b></h5></i>
+                <h5 class="text-center py-2 text-decoration-none"><b>{{__("ui.{$category->name}")}}</b></h5></i>
             </div>
         </a>
         @endforeach
@@ -173,7 +176,6 @@
 </div>
 
 <!-- contenedor ultimos anuncios -->
-
 <div class="container py-3">
     <div class="row py-3">
         <div class="col-12 text-center">
@@ -209,7 +211,6 @@
                         <p class="card-text small text-muted">{{$ad->description}}</p>
                         <p class="card-text text-muted small">{{$ad->price}}€</p>
                     </div>
-
                     <div class="d-flex justify-content-end borde align-items-center py-2">
                         <a href="{{route('ad.details', ['id'=>$ad->id])}}" class="btn px-4 rounded-0">DETALLE
                             <i class="fa-solid fa-arrow-right"></i>
