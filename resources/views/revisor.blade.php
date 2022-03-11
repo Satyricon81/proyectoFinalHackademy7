@@ -111,6 +111,12 @@
     </div>
 </div>
 @else
-<h3 class="text-center my-5 py-5">There are no ads to revise.</h3>
+<div class="container my-5 py-5">
+    <div class="row my-5 py-5">
+        <div class="col-12">
+            <h3 class="text-center"> {{ __('ui.revisornomoreads') }}</h3>
+        </div>
+    </div>
+</div>
 @endif
 @endsection

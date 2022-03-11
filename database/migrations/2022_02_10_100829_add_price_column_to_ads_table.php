@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('ads', function (Blueprint $table) {
-            $table->decimal('price',15,2)->after('description');
+            $table->decimal('price',15)->after('description');
         });
     }
 

@@ -80,8 +80,5 @@ return [
     'newad5' =>'Images',
     'newaddropmessage' =>'Drop images here to upload',
     'newadbutton' =>'Submit',
-
-    
-
-
+    'revisornomoreads'=> 'There are no ads to revise',
 ];

@@ -3,7 +3,7 @@
 <style>
     .neomorphInput {
         border-radius: 50px;
-        background: #ddf0ff;
+        background: #f7deba;
         box-shadow: 20px 20px 60px #bcccd9,
             -20px -20px 60px #feffff;
     }
@@ -41,9 +41,9 @@
                                         <input type="text" class="form-control rounded-0 border-0" id="adName"
                                             name="title" value="{{old('title')}}">
                                     </div>
-                                    @error('title')
-                                    <div class="alert alert-danger">{{ $message }}</div>
-                                    @enderror
+                                        @error('title')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                        @enderror
                                     <div class="form-group mb-3 text-bold">
                                         <label for="form-label" class="my-2">{{ __('ui.newad2') }}</label>
                                         <select class="form-control rounded-0 border-0" id="categories"
@@ -68,14 +68,15 @@
                                     <div class="form-group mb-3">
                                         <label for="adBody">{{ __('ui.newad4') }}</label>
                                         <textarea class="form-control rounded-0 border-0" name="description" id="adBody"
-                                            cols="30" rows="3">{{old('description')}}</textarea>
+                                        cols="30" rows="3">{{old('description')}}</textarea>
                                     </div>
-                                    @error('description')
-                                    <div class="alert alert-danger">{{ $message }}</div>
-                                    @enderror
+                                        @error('description')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                        @enderror
                                     <div class="mb-3">
                                         <label for="adImages" class="form-label">{{ __('ui.newad5') }}</label>
-                                        <div class="dropzone d-flex align-items-center justify-content-center" id="drophere"></div>
+                                        <div class="dropzone d-flex align-items-center justify-content-center" id="drophere">
+                                        </div>
                                         @error('images')
                                         <small class="alert alert-danger">{{ $message }}</small>
                                         @enderror
