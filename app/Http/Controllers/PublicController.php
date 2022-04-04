@@ -9,6 +9,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use App\Http\Controllers\Controller;
 
+
+
 class PublicController extends Controller
 {
     public function index() {
@@ -53,5 +55,16 @@ class PublicController extends Controller
         session()->put('locale', $locale);
         return redirect()->back();   
     }
+    
+
+    public function search(Request $request)
+    {
+        $q = $request->input('q');
+        $ads = Ad::search($q)
+            ->where('is_accepted', true)
+            ->get();
+            
+        return view('search_results', compact('q', 'ads'));
+    } 
     
 }

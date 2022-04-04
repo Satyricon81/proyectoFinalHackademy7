@@ -32,6 +32,7 @@ Route::get('/user_id/{name}/{id}/ads', [PublicController::class,'adsByUser'])->n
 Route::post('/revisor/ad/{id}/accept', [RevisorController::class,'accept'])->name('revisor.ad.accept');
 Route::post('/revisor/ad/{id}/reject', [RevisorController::class,'reject'])->name('revisor.ad.reject');
 Route::post('/locale/{locale}', [PublicController::class,'locale'])->name('layouts._locale');
+Route::get('/search', [PublicController::class,'search'])->name('search');
 
 
 

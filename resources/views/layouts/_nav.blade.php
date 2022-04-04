@@ -14,9 +14,6 @@
             <li class="nav-item m-2">
                 <a class="nav-link active fw-bold fs-5 text-uppercase" aria-current="page" href="{{ route('welcome') }}">{{ __('ui.home') }}</a>
             </li>
-            <li class="nav-item m-2">
-            <a class="nav-link active fw-bold fs-5 text-uppercase" href="{{ route('contact') }}">{{ __('ui.contact') }}</a>
-            </li>
             <li class="nav-item m-2 dropdown">
                 <a class="nav-link active fw-bold fs-5 dropdown-toggle" href="#" id="dropdown04"
                 data-bs-toggle="dropdown" aria-expanded="false">{{ __('ui.categories') }}</a>
@@ -27,6 +24,9 @@
                     </li>
                     @endforeach
                 </ul>
+            </li>
+            <li class="nav-item m-2">
+                <a class="nav-link active fw-bold fs-5 text-uppercase" href="{{ route('contact') }}">{{ __('ui.contact') }}</a>
             </li>
             <li class="nav-item m-2 dropdown list-unstyled">
                 <a class="nav-link active fw-bold fs-5 text-uppercase dropdown-toggle" href="#" id="dropdown04"
@@ -52,6 +52,12 @@
                     </li>
                 </ul>
             </li>
+            
+            <form action="{{ route('search') }}" method="GET" class="d-flex">
+                <input class="form-control me-2" type="text" name="q" 
+                placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
             
             @auth
             @if (Auth::user()->is_revisor)
