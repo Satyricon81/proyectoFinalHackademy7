@@ -29,7 +29,7 @@
 </style>
 @endpush
 @section('content')
-<div class="container my-2 py-2">
+<div class="container">
     <div class="row">
         <div class="col-12 text-center textshadow text-white my-5 py-5">
             <h3>{{__("ui.{$category->name}")}}</h3>
