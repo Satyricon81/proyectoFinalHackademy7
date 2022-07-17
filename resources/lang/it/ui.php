@@ -80,4 +80,5 @@ return [
     'newad5' =>'Immagini',
     'newaddropmessage' =>'Trascina le immagini qui per caricarle',
     'newadbutton' =>'Invia',
+    'revisornomoreads'=> 'Non ci sono annunci da rivedere',
 ];

@@ -28,9 +28,11 @@ Route::delete('/ad/images/remove', [HomeController::class,'removeImages'])->name
 Route::get('/ad/images', [HomeController::class,'getImages'])->name('ad.images');
 Route::get('/ad/{id}', [HomeController::class,'details'])->name('ad.details');
 Route::get('/category/{name}/{id}/ads', [PublicController::class,'adsByCategory'])->name('category.ads');
+Route::get('/user_id/{name}/{id}/ads', [PublicController::class,'adsByUser'])->name('user.ads');
 Route::post('/revisor/ad/{id}/accept', [RevisorController::class,'accept'])->name('revisor.ad.accept');
 Route::post('/revisor/ad/{id}/reject', [RevisorController::class,'reject'])->name('revisor.ad.reject');
 Route::post('/locale/{locale}', [PublicController::class,'locale'])->name('layouts._locale');
+Route::get('/search', [PublicController::class,'search'])->name('search');
 
 
 

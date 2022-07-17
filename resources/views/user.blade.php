@@ -1,12 +1,6 @@
 @extends('layouts.app')
 @push('style')
 <style>
-    .neomorphInput {
-        border-radius: 50px;
-        background: #ddf0ff;
-        box-shadow: 20px 20px 60px #bcccd9,
-        -20px -20px 60px #feffff;
-    }
     
     body {
         background-color: rgb(222, 229, 240);
@@ -26,16 +20,17 @@
     .borde {
         border-top: 1px solid rgb(240, 166, 70);
     }
+
 </style>
 @endpush
 @section('content')
-<div class="container">
+<div class="container my-2 py-2">
     <div class="row">
         <div class="col-12 text-center textshadow text-white my-5 py-5">
-            <h3>{{__("ui.{$category->name}")}}</h3>
+            <h3>Anuncios de {{__("{$user->name}")}}</h3>
         </div>
     </div>
-    <div class="row mb-5">
+    <div class="row mb-3">
         @foreach($ads as $ad)
         <div class="col-12 col-md-3 mb-4 revealAds">
             <div class="card card-ads rounded-0" style="width: 18rem;">
@@ -73,9 +68,11 @@
     </div>
     @endforeach
 </div>
-<div class="row my-3">
-    <div class="col-12 d-flex justify-content-center text-black">
-        {{ $ads->links() }}
+<div class="container">
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center mt-3">
+           <span>{{ $ads->links() }}</span> 
+        </div>
     </div>
 </div>
 @endsection

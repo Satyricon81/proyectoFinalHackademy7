@@ -1,7 +1,7 @@
 <?php
 
 return [
-
+    
     /*
     |--------------------------------------------------------------------------
     | Default Search Engine
@@ -14,9 +14,9 @@ return [
     | Supported: "algolia", "meilisearch", "database", "collection", "null"
     |
     */
-
-    'driver' => env('SCOUT_DRIVER', 'algolia'),
-
+    
+    'driver' => env('SCOUT_DRIVER', 'tntsearch'),
+    
     /*
     |--------------------------------------------------------------------------
     | Index Prefix
@@ -27,9 +27,9 @@ return [
     | "tenants" or applications sharing the same search infrastructure.
     |
     */
-
+    
     'prefix' => env('SCOUT_PREFIX', ''),
-
+    
     /*
     |--------------------------------------------------------------------------
     | Queue Data Syncing
@@ -40,9 +40,9 @@ return [
     | all automatic data syncing will get queued for better performance.
     |
     */
-
+    
     'queue' => env('SCOUT_QUEUE', false),
-
+    
     /*
     |--------------------------------------------------------------------------
     | Database Transactions
@@ -53,9 +53,9 @@ return [
     | been committed, thus preventing any discarded data from syncing.
     |
     */
-
+    
     'after_commit' => false,
-
+    
     /*
     |--------------------------------------------------------------------------
     | Chunk Sizes
@@ -66,12 +66,12 @@ return [
     | tune each of these chunk sizes based on the power of the servers.
     |
     */
-
+    
     'chunk' => [
         'searchable' => 500,
         'unsearchable' => 500,
     ],
-
+    
     /*
     |--------------------------------------------------------------------------
     | Soft Deletes
@@ -82,9 +82,9 @@ return [
     | if your application still needs to search for the records later.
     |
     */
-
+    
     'soft_delete' => false,
-
+    
     /*
     |--------------------------------------------------------------------------
     | Identify User
@@ -97,9 +97,9 @@ return [
     | Supported engines: "algolia"
     |
     */
-
+    
     'identify' => env('SCOUT_IDENTIFY', false),
-
+    
     /*
     |--------------------------------------------------------------------------
     | Algolia Configuration
@@ -110,12 +110,25 @@ return [
     | in your application ID and admin API key to get started searching.
     |
     */
-
+    
     'algolia' => [
         'id' => env('ALGOLIA_APP_ID', ''),
         'secret' => env('ALGOLIA_SECRET', ''),
     ],
-
+    
+    
+    'tntsearch' => [
+        'storage'  => storage_path(), //place where the index files will be stored
+        'fuzziness' => true,
+        'fuzzy' => [
+            'prefix_length' => 3,
+            'max_expansions' => 50,
+            'distance' => 3
+        ],
+        'asYouType' => false,
+        'searchBoolean' => true,
+    ],
+    
     /*
     |--------------------------------------------------------------------------
     | MeiliSearch Configuration
@@ -128,10 +141,10 @@ return [
     | See: https://docs.meilisearch.com/guides/advanced_guides/configuration.html
     |
     */
-
+    
     'meilisearch' => [
         'host' => env('MEILISEARCH_HOST', 'http://localhost:7700'),
         'key' => env('MEILISEARCH_KEY', null),
     ],
-
+    
 ];

@@ -80,7 +80,5 @@ return [
     'newad5' =>'Imagenes',
     'newaddropmessage' =>'Suelta tus imagenes aqui para subirlas',
     'newadbutton' =>'Enviar',
-    
-
-    
+    'revisornomoreads'=> 'No hay mas anuncios por revisar',
 ];

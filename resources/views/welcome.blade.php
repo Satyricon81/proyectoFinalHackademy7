@@ -253,5 +253,4 @@
     });
 
 </script>
-
 @endpush
