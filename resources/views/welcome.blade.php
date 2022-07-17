@@ -22,7 +22,7 @@
 
     .sobreNosotros {
         height: 500px;
-        width: 100vw;
+        width: 100%;
         background-image: linear-gradient(transparent, rgba(60, 58, 58, 0.619) 95%), url('/imagenes_propias/fotonueva.jpg');
         background-position: center;
         background-repeat: no-repeat;
@@ -53,7 +53,7 @@
 <!-- contenedor above the fold -->
 <div class="container-fluid text-center mb-5 py-3 aboveImage">
     <div class="row h-100 align-items-center justify-content-center">
-        <div class="col-12 ">
+        <div class="col-12">
             <h1 class="text-white textshadow reveal d-none d-md-block">{{ __('ui.welcome') }}
                 <i>RAPIDO</i>
             </h1>
@@ -224,7 +224,7 @@
 </div>
 
 <!-- calltoaction entre cards y footer -->
-<div class="container-fluid d-flex justify-content-center align-items-center my-5 py-5 bg-dark" style="width: 100vw">
+<div class="container-fluid d-flex justify-content-center align-items-center my-5 py-5 bg-dark" style="width: 100%">
     <div class="row align-items-center">
         <div class="col-12 col-md-6 text-center text-white">
             <strong>{{ __('ui.textobotonfooter') }}</strong>
