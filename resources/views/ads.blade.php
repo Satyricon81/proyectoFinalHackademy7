@@ -29,8 +29,8 @@
 </style>
 @endpush
 @section('content')
-<div class="container my-3 py-3">
-    <div class="row my-3 py-3">
+<div class="container">
+    <div class="row">
         <div class="col-12 text-center textshadow text-white my-5 py-5">
             <h3>{{ __('ui.categoriesview') }}</h3>
         </div>

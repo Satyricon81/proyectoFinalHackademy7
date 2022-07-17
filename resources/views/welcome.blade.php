@@ -3,6 +3,8 @@
 <style>
     body {
         background-color: rgb(234, 239, 246);
+        margin: 0;
+        padding: 0;
     }
     
     .aboveImage {
@@ -13,7 +15,6 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-
     }
 
     .sombraImg {
@@ -22,7 +23,7 @@
 
     .sobreNosotros {
         height: 500px;
-        width: 100vw;
+        width: 100%;
         background-image: linear-gradient(transparent, rgba(60, 58, 58, 0.619) 95%), url('/imagenes_propias/fotonueva.jpg');
         background-position: center;
         background-repeat: no-repeat;
@@ -150,7 +151,7 @@
 <div class="container my-3 d-none d-lg-block">
     <div class="col-12 d-flex justify-content-center">
         @foreach ($categories as $category)
-        <a type="button" class="btn btn-transparent mx-3 box-radius"  href="{{route('category.ads', ['name'=>$category->name, 'id'=>$category->id])}}">
+        <a type="button" class="btn btn-transparent mx-1 box-radius"  href="{{route('category.ads', ['name'=>$category->name, 'id'=>$category->id])}}">
             <div class="btn">
                 <i class="px-2 py-2 h2 text-center {{$category->icon}}">
                 <h5 class="text-center py-2 text-decoration-none"><b>{{__("ui.{$category->name}")}}</b></h5></i>
@@ -224,7 +225,7 @@
 </div>
 
 <!-- calltoaction entre cards y footer -->
-<div class="container-fluid d-flex justify-content-center align-items-center my-5 py-5 bg-dark" style="width: 100vw">
+<div class="container-fluid d-flex justify-content-center align-items-center my-5 py-5 bg-dark" style="width: 100%">
     <div class="row align-items-center">
         <div class="col-12 col-md-6 text-center text-white">
             <strong>{{ __('ui.textobotonfooter') }}</strong>
